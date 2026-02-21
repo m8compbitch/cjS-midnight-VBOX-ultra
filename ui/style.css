@@ -1,0 +1,38 @@
+body { background: transparent; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+
+#vbox-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.glass-panel {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 240px;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header { font-size: 10px; color: #00f2ff; margin-bottom: 10px; font-weight: bold; }
+
+.gauge-box { position: relative; text-align: center; margin-bottom: 15px; }
+
+.speed-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.speed-text h1 { margin: 0; font-size: 42px; text-shadow: 0 0 10px #00f2ff; }
+.speed-text p { margin: 0; font-size: 12px; color: #888; }
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.1s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 314.159;
+    stroke-dashoffset: 314.159;
+}
+
+.stats { border-top: 1px solid #333; padding-top: 10px; }
+.stat-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 5px; }
+.highlight { color: #00ff88; font-weight: bold; }
