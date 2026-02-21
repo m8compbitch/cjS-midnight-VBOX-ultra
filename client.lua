@@ -4,7 +4,6 @@ local isTesting = false
 local stats = { zero60 = 0.0, hundred200 = 0.0, best060 = 0.0 }
 local pStartTime = 0
 
--- --- 1. THE ADVANCED MENU ---
 function OpenMidnightMenu()
     lib.registerContext({
         id = 'midnight_vbox',
@@ -44,7 +43,6 @@ function OpenMidnightMenu()
     lib.showContext('midnight_vbox')
 end
 
--- --- 2. THE UI DRAWING ---
 function DrawVboxUltra(speed, veh)
     DrawRect(0.88, 0.45, 0.14, 0.18, 10, 10, 10, 200) 
     DrawRect(0.88, 0.36, 0.14, 0.003, 0, 150, 255, 255) 
@@ -82,7 +80,6 @@ function DrawShiftHUD(veh)
     end
 end
 
--- --- 3. MAIN LOOP ---
 CreateThread(function()
     while true do
         local sleep = 500
@@ -132,4 +129,5 @@ function DrawTextUI(text, x, y, scale, font, center, color)
 end
 
 RegisterCommand('midnight', function() OpenMidnightMenu() end)
+
 RegisterKeyMapping('midnight', 'Open VBOX', 'keyboard', 'F11')
